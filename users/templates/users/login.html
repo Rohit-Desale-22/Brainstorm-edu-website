@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainstorm Login</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2 class="heading">Login to Brainstorm</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div>
+                <label for="email" class="form-label">Email:</label>
+                <input type="text" id="email" name="email" class="form-field">
+            </div>
+            <div>
+                <label for="password" class="form-label">Password:</label>
+                <input type="password" id="password" name="password" class="form-field">
+            </div>
+            <div>
+                <button type="submit" class="form-button">Login</button>
+            </div>
+            <div class="text-center mt-4">
+                <a href="{% url 'signup' %}" class="link-text">Don't have an account? Register here.</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

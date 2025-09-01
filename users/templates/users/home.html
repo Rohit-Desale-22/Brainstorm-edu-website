@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="home-container">
+        <h1>Welcome!</h1>
+        <p>Please choose an option:</p>
+        <a href="{% url 'login' %}" class="btn">Sign In</a>
+        <a href="{% url 'signup' %}" class="btn">Sign Up</a>
+    </div>
+</body>
+</html>
