@@ -1,2 +1,20 @@
-<h1>Welcome Teacher, {{ request.user.username }}</h1>
-<p>This is the teacher dashboard.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ user.username }} (Teacher)</h1>
+    <p>This is your teacher dashboard.</p>
+
+    <ul>
+        <li><a href="#">Create Course</a></li>
+        <li><a href="#">Upload Materials</a></li>
+        <li><a href="#">View Student Progress</a></li>
+    </ul>
+
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>

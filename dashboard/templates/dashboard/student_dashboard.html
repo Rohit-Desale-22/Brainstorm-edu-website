@@ -1,2 +1,20 @@
-<h1>Welcome Student, {{ request.user.username }}</h1>
-<p>This is the student dashboard.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ user.username }} (Student)</h1>
+    <p>This is your student dashboard.</p>
+
+    <ul>
+        <li><a href="#">View Courses</a></li>
+        <li><a href="#">Take Quiz</a></li>
+        <li><a href="#">Progress Report</a></li>
+    </ul>
+
+    <a href="{% url 'logout' %}">Logout</a>
+</body>
+</html>
